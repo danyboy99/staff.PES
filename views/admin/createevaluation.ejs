@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/evaluation.css" />
+    <title>SPES</title>
+  </head>
+  <body>
+    <header>
+      <a href="/admin/homepage"
+        ><i class="fa fa-arrow-left" aria-hidden="true"></i> home</a
+      >
+      <h3>evaluator/admin panel</h3>
+    </header>
+    <div class="status-bar">
+      <% if(hasErr){%> <% errMsg.forEach(msg =>{%>
+      <p><%= msg%></p>
+      <%})%> <%}%> <% if(hasSuccess){%> <% successMsg.forEach(msg =>{%>
+      <p><%= msg%></p>
+      <%})%> <%}%>
+    </div>
+    <main>
+      <h3>create evaluation</h3>
+      <form action="/admin/newevaluation" method="post">
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">critaria</label>
+          <input
+            type="text"
+            class="form-control"
+            name="critaria"
+            id="inputAddress"
+            placeholder="critaria"
+            required
+          />
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">score / 100</label>
+          <input
+            type="text"
+            class="form-control"
+            name="score"
+            id="inputAddress"
+            placeholder="score"
+            required
+          />
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">week</label>
+          <select name="week" class="form-select" id="inlineFormSelectPref">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">semester</label>
+          <select name="semester" class="form-select" id="inlineFormSelectPref">
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+          </select>
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">session</label>
+          <input
+            type="text"
+            class="form-control"
+            name="session"
+            id="inputAddress"
+            placeholder="session"
+            required
+          />
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">status</label>
+          <input
+            type="text"
+            class="form-control"
+            name="status"
+            id="inputAddress"
+            placeholder="status"
+            required
+          />
+        </div>
+        <div class="col-8">
+          <label for="inputAddress" class="form-label">staff</label>
+          <select name="staff" class="form-select" id="inlineFormSelectPref">
+            <% staffs.forEach(staff =>{%>
+            <option value="<%= staff.fullname%>"><%= staff.fullname%></option>
+            <%})%>
+          </select>
+        </div>
+        <input type="submit" value="create evaluation" />
+      </form>
+    </main>
+  </body>
+</html>

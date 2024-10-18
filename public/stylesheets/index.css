@@ -1,0 +1,38 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Heading style */
+h3 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* Button container styling */
+.button {
+  margin-top: 40px;
+}
+
+/* Links styling */
+.button a {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for links */
+.button a:hover {
+  background-color: #0056b3;
+}

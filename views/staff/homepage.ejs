@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/staffhomepage.css" />
+    <title>SPES</title>
+  </head>
+  <body>
+    <header>
+      <h3>staff panel</h3>
+    </header>
+    <main>
+      <div class="staff-info">
+        <h4><%= staff.fullname %></h4>
+        <h4><%= staff.email %></h4>
+      </div>
+      <div class="staff-evaluation-container">
+        <% if(hasEva){ %>
+        <div class="staff evaluation">
+          <% evaluation.forEach(eva =>{ %>
+          <div class="evaluation-container">
+            <p>critaria : <%= eva.critaria%></p>
+            <p>score : <%= eva.score%></p>
+            <p>week : <%= eva.week%></p>
+            <p>semester: <%= eva.semester%></p>
+            <p>session : <%= eva.session%></p>
+            <p>evaluator : <%= eva.evaluator%></p>
+            <p>staff : <%= eva.staff%></p>
+            <p>status : <%= eva.status%></p>
+          </div>
+          <% }) %>
+        </div>
+        <%}else{%>
+        <div>
+          <h4>no evaluation for this staff yet !!</h4>
+        </div>
+        <%}%>
+      </div>
+    </main>
+  </body>
+</html>

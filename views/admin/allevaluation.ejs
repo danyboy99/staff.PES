@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/allevaluation.css" />
+    <title>SEPS</title>
+  </head>
+  <body>
+    <header>
+      <a href="/admin/homepage"
+        ><i class="fa fa-arrow-left" aria-hidden="true"></i> home</a
+      >
+      <h3>evaluator/admin panel</h3>
+    </header>
+    <main>
+      <% evaluation.forEach(eval =>{%>
+      <div>
+        <p>critaria: <%= eval.critaria %></p>
+        <p>score: <%= eval.score %></p>
+        <p>week: <%= eval.week %></p>
+        <p>semester: <%= eval.semester %></p>
+        <p>session: <%= eval.session %></p>
+        <p>status: <%= eval.status %></p>
+        <p>evaluator: <%= eval.evaluator %></p>
+        <p>staff: <%= eval.staff %></p>
+      </div>
+      <% })%>
+    </main>
+  </body>
+</html>

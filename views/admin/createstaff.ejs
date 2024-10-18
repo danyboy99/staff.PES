@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/createstaff.css" />
+    <title>SPES</title>
+  </head>
+  <body>
+    <header>
+      <a href="/admin/homepage"
+        ><i class="fa fa-arrow-left" aria-hidden="true"></i> home</a
+      >
+      <h3>evaluator/admin panel</h3>
+    </header>
+    <div class="server-msg">
+      <% if(hasErr){%> <% errMsg.forEach(message =>{ %>
+      <p><%= message%></p>
+      <% })%> <% } %> <% if(hasSuccess){%> <% successMsg.forEach(message =>{ %>
+      <p><%= message%></p>
+      <% })%> <% } %>
+    </div>
+    <main>
+      <h1>create new staff</h1>
+      <form action="/staff/create" method="post">
+        <input type="text" placeholder="fullname" name="fullname" />
+        <input type="email" placeholder="email" name="email" />
+        <input type="password" placeholder="password" name="password" />
+        <input type="submit" value="create staff" />
+      </form>
+    </main>
+  </body>
+</html>

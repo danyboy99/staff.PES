@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* Link to home */
+header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Arrow icon next to home link */
+header a i {
+  margin-right: 8px;
+}
+
+/* Hover effect for the home link */
+header a:hover {
+  color: #dcdcdc;
+}
+
+/* Header title */
+header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.staff-div {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.staff-div h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.staff-div h4:nth-child(1) {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.staff-div h4:nth-child(2) {
+  color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .staff-div {
+    padding: 15px;
+  }
+}
+/* Media query to ensure responsiveness on smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header a {
+    margin-bottom: 10px;
+  }
+
+  header h3 {
+    font-size: 20px;
+  }
+}
